@@ -1,0 +1,12 @@
+<div class="space-y-8">
+  <h1>USERS</h1>
+
+  <div>
+    <p>fetch from <span class="underline">https://jsonplaceholder.typicode.com/users</span></p>
+  </div>
+  <div class="grid grid-cols-4 gap-2">
+    <% users.forEach((user, index)=> { %>
+    <%- include('../../components/shared/user-card', { index, name: user.name, username: user.username, email: user.email, phone: user.phone, website: user.website, } ) %>
+    <% }); %>
+  </div>
+</div>
